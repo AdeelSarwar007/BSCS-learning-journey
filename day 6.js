@@ -1,3 +1,3 @@
 function changeText(){
-    alert("Adeel");
+    document.getElementById("title").innerHTML = "Welcome Adeel";
 }
