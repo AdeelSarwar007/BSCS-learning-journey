@@ -51,3 +51,68 @@ def update():
 
     conn.commit()
     print("Student Updated Successfully")
+
+
+# Delete Student
+def delete():
+    student_id = int(input("Enter Student ID: "))
+
+    cursor.execute(
+        "DELETE FROM students WHERE id=?",
+        (student_id,)
+    )
+
+    conn.commit()
+    print("Student Deleted Successfully")
+def search():
+    name = input("Enter Name: ")
+
+    cursor.execute(
+        "SELECT * FROM students WHERE name=?",
+        (name,)
+    )
+
+    students = cursor.fetchall()
+
+    if len(students) == 0:
+        print("No Record Found")
+
+    else:
+        for student in students:
+            print(student)
+
+# Menu
+while True:
+    print("\n---------- Menu ----------")
+    print("1. Add Student")
+    print("2. Show Students")
+    print("3. Update Student")
+    print("4. Delete Student")
+    print("5. Search Student")
+    print("6. Exit")
+
+    choice = input("Enter Number: ")
+
+    if choice == "1":
+        add()
+
+    elif choice == "2":
+        show()
+
+    elif choice == "3":
+        update()
+
+    elif choice == "4":
+        delete()
+
+    elif choice == "5":
+        search()
+
+    elif choice == "6":
+        print("Good Bye!")
+        break
+
+    else:
+        print("Invalid Choice")
+
+conn.close() 
