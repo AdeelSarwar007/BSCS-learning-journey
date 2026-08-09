@@ -64,7 +64,22 @@ def delete():
 
     conn.commit()
     print("Student Deleted Successfully")
+def search():
+    name = input("Enter Name: ")
 
+    cursor.execute(
+        "SELECT * FROM students WHERE name=?",
+        (name,)
+    )
+
+    students = cursor.fetchall()
+
+    if len(students) == 0:
+        print("No Record Found")
+
+    else:
+        for student in students:
+            print(student)
 
 # Menu
 while True:
@@ -73,7 +88,8 @@ while True:
     print("2. Show Students")
     print("3. Update Student")
     print("4. Delete Student")
-    print("5. Exit")
+    print("5. Search Student")
+    print("6. Exit")
 
     choice = input("Enter Number: ")
 
@@ -90,6 +106,9 @@ while True:
         delete()
 
     elif choice == "5":
+        search()
+
+    elif choice == "6":
         print("Good Bye!")
         break
 
