@@ -60,4 +60,4 @@ for record in records:
 
 conn.close()
 
-print("\nDay 24 Complete Successfully!")
+print("\nDay 24 Complete Successfully!") 
