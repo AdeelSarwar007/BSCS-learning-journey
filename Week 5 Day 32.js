@@ -1,7 +1,7 @@
-function square(num) {
-    return num * num;
+function fullName(first, last) {
+    return first + " " + last;
 }
 
-let answer = square(5);
+let name = fullName("Adeel", "Sarwar");
 
-console.log(answer);
+console.log(name);
