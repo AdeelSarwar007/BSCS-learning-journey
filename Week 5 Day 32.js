@@ -1,7 +1,7 @@
-function fullName(first, last) {
-    return first + " " + last;
+function percentage(obtained, total) {
+    return (obtained / total) * 100;
 }
 
-let name = fullName("Adeel", "Sarwar");
+let result = percentage(450, 500);
 
-console.log(name);
+console.log(result);
