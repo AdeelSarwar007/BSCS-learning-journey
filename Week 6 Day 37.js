@@ -1,17 +1,14 @@
-let student = {
-
-    name: "Adeel",
-    age: 21,
-    degree: "BSCS",
-
-    showProfile: function(){
-
-        console.log("Name:", this.name);
-        console.log("Age:", this.age);
-        console.log("Degree:", this.degree);
-
+let laptop = {
+    add : function(a,b){
+        return a+b;
+    },
+    sub : function (a,b){
+        return a-b;
+    },
+    mul : function(a,b){
+        return a*b;
     }
-
 };
-
-student.showProfile();
+console.log(laptop.add(3,7));
+console.log(laptop.sub(3,7));
+console.log(laptop.mul(3,7));
