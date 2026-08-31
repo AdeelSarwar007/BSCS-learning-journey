@@ -15,6 +15,18 @@ let students =[
         city : "Vehari"
     }
 ];
+function add(name, age, city){
+
+    students.push({
+
+        name: name,
+        age: age,
+        city: city
+
+    });
+
+}
+
 function show(){
     students.forEach(function(student){
         console.log("Name:", student.name);
@@ -25,4 +37,5 @@ function show(){
     });
 
 }
+add("Ahmed", 20, "Karachi");
 show();
