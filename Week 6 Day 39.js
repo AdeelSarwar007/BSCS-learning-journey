@@ -1,8 +1,9 @@
-let cities = [
-    "Vehari",
-    "Lahore",
-    "Karachi"
+let skills = [
+    "Python",
+    "SQL",
+    "JavaScript",
+    "AI"
 ];
-cities.forEach(function(city){
-    console.log(city);
+skills.forEach(function(skill){
+    console.log(skill)
 });
