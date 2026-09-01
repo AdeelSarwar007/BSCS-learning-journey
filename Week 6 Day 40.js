@@ -38,4 +38,7 @@ function show(){
 
 }
 add("Ahmed", 20, "Karachi");
+add("Usman","23","Islamabad");
+
 show();
+console.log("Total student : " + students.length);
