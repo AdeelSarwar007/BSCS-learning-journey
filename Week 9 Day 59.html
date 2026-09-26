@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adeel Portfolio</title>
+        <style>
+            body{
+                background-color: #f0f0f0;
+                font-family: Arial;
+                margin:20px;
+            }
+            .navbar{
+                display:flex;
+                justify-content:space-around;
+                background:black;
+                padding:15px;
+                border-radius:15px;
+            }
+            .navbar a{
+                color:white;
+                text-decoration:none;
+            }
+            .navbar a:hover{
+                color:yellow;
+            }
+            .card{
+                width:90%;
+                max-width:900px;
+                margin:30px auto;
+                padding:20px;
+                background:white;
+                border-radius:15px;
+                box-shadow:5px 5px 15px gray;
+            }
+            .profile{
+                text-align:center;
+            }
+            . profile img{
+                width:150px;
+                border-radius:50%;
+            }
+            .skills{
+                display:flex;
+                gap:20px;
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+            .skill-card{
+                width:150px;
+                padding:15px;
+                background:white;
+                border-radius:10px;
+                box-shadow:5px 5px 10px gray;
+                text-align:center;
+
+            }
+            .skill-card:hover{
+                background:lightblue;
+            }
+            .github-btn{
+
+                background:blue;
+                color:white;
+                padding:12px 20px;
+                border:none;
+                border-radius:10px;
+                cursor:pointer;
+
+            }
+            .github-btn:hover{
+                background:red;
+            }
+            input, textarea{
+
+                width:99%;
+                padding:10px;
+                margin-top:10px;
+                margin-bottom:15px;
+            }
+     
+        </style>
+        <body>
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="card">
+                <div class="profile">
+                    <img scr="profile.jpg" alt="Profile">
+                    <h1>Adeel Sarwar</h1>
+                    <p>BSCS Student | Future AI Engineer</p>
+                </div>
+                <h2>About Me</h2>
+                <p>
+                    Passionate BSCS student focused on AI, Full Stack Development and building real-world software solutions.
+                </p>
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">SQL</div>
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">AI</div>
+                </div>
+                <h2>Projects</h2>
+                <ol>
+                    <li>Student Management System</li>
+                    <li>Library Management System</li>
+                    <li>CareerPilot AI</li>
+                    <li>AI Patient Triage System</li>
+                </ol>
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <textarea placeholder="Enter Message"></textarea>
+                    <button class="github-btn">
+                        Submit
+                    </button>
+                </form>
+                <br>
+                <h2>GitHub</h2>
+                <button class="github-btn">
+                    Visit My GitHub
+                </button>
+
+            </div>
+        </body>
+    </head>
+</html>
