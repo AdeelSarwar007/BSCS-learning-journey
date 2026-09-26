@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Adeel Portfolio</title>
+
+    <style>
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: black;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        /* Main Card */
+
+        .card {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px gray;
+        }
+
+        /* Profile */
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid blue;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: darkblue;
+            border: 2px solid #e6dddd;
+            padding: 5px;
+            border-radius: 15px;
+            background-color: rgb(196, 199, 49);
+            
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill-card {
+            width: 150px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            background: lightblue;
+        }
+
+        /* Buttons */
+
+        .github-btn {
+            background: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .github-btn:hover {
+            background: red;
+        }
+
+        /* Form */
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: black;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main Card -->
+
+    <div class="card">
+
+        <!-- Profile -->
+
+        <div class="profile">
+
+            <img src="profile.jpg" alt="Profile">
+
+            <h1>Adeel Sarwar</h1>
+
+            <p>BSCS Student | Future AI Engineer</p>
+
+        </div>
+
+        <!-- About -->
+
+        <h2>About Me</h2>
+
+        <p>
+            Passionate BSCS student focused on AI,
+            Full Stack Development and Software Engineering.
+            Currently building AI projects and preparing
+            for an AI Engineering career.
+        </p>
+
+        <!-- Skills -->
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill-card">Python</div>
+
+            <div class="skill-card">SQL</div>
+
+            <div class="skill-card">HTML</div>
+
+            <div class="skill-card">CSS</div>
+
+            <div class="skill-card">JavaScript</div>
+
+            <div class="skill-card">AI</div>
+
+        </div>
+
+        <!-- Projects -->
+
+        <h2>Projects</h2>
+
+        <ol>
+
+            <li>Student Management System</li>
+
+            <li>Library Management System</li>
+
+            <li>CareerPilot AI</li>
+
+            <li>AI Patient Triage System (FYP)</li>
+
+        </ol>
+
+        <!-- Personal Information -->
+
+        <h2>Personal Information</h2>
+
+        <p>Age: 21</p>
+
+        <p>City: Vehari</p>
+
+        <p>Degree: BSCS</p>
+
+        <p>CGPA: 3.28</p>
+
+        <!-- Goals -->
+
+        <h2>Goals</h2>
+
+        <ul>
+
+            <li>Become AI Engineer</li>
+
+            <li>Build AI Products</li>
+
+            <li>Start Freelancing</li>
+
+            <li>Launch SaaS Products</li>
+
+        </ul>
+
+        <!-- Contact -->
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <input type="text" placeholder="Enter Name">
+
+            <input type="email" placeholder="Enter Email">
+
+            <textarea placeholder="Enter Message"></textarea>
+
+            <button class="github-btn">
+
+                Submit
+
+            </button>
+
+        </form>
+
+        <br>
+
+        <!-- GitHub -->
+
+        <h2>GitHub</h2>
+
+        <a href="https://github.com/AdeelSarwar007" target="_blank">
+
+            <button class="github-btn">
+
+                Visit My GitHub
+
+            </button>
+
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Adeel Sarwar | Future AI Engineer
+
+    </footer>
+
+</body>
+
+</html>
