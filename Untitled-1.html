@@ -1,25 +1,492 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Adeel Portfolio</title>
+
+    <style>
+
+        /* ---------------- BODY ---------------- */
+
+        body {
+            background-color: #f4f7fb;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #1f2937;
+        }
+
+
+        /* ---------------- NAVBAR ---------------- */
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            background-color: #0f172a;
+
+            padding: 16px;
+
+            border-radius: 14px;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+        .navbar a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 8px 12px;
+
+            border-radius: 6px;
+        }
+
+        .navbar a:hover {
+            background-color: #2563eb;
+
+            color: white;
+        }
+
+
+        /* ---------------- MAIN CARD ---------------- */
+
+        .card {
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 30px auto;
+
+            padding: 25px;
+
+            background-color: white;
+
+            border-radius: 16px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* ---------------- HEADINGS ---------------- */
+
+        h1 {
+            color: #0f172a;
+
+            text-align: center;
+        }
+
+        h2 {
+            color: #1d4ed8;
+
+            border-bottom: 2px solid #dbeafe;
+
+            padding-bottom: 6px;
+
+            margin-top: 30px;
+        }
+
+
+        /* ---------------- PARAGRAPHS ---------------- */
+
+        p {
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ---------------- SKILLS ---------------- */
+
+        .skills {
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        .skill-card {
+            width: 150px;
+
+            padding: 18px;
+
+            background-color: #eff6ff;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            text-align: center;
+
+            font-weight: bold;
+
+            color: #1e3a8a;
+        }
+
+        .skill-card:hover {
+            background-color: #dbeafe;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ---------------- FORM ---------------- */
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            margin-top: 10px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            box-sizing: border-box;
+
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+
+        /* ---------------- BUTTON ---------------- */
+
+        .github-btn {
+            display: inline-block;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            padding: 12px 20px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            text-decoration: none;
+        }
+
+        .github-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            max-width: 1000px;
+
+            margin: 20px auto;
+
+            text-align: center;
+
+            padding: 16px;
+
+            background-color: #0f172a;
+
+            color: white;
+
+            border-radius: 12px;
+        }
+
+
+        /* ---------------- MEDIA QUERY ---------------- */
+
+        @media (max-width: 600px) {
+
+            body {
+                margin: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+            .navbar a {
+                width: 90%;
+
+                text-align: center;
+            }
+
+            .card {
+                width: 90%;
+
+                padding: 15px;
+            }
+
+            .skills {
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            .skill-card {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .github-btn {
+                width: 100%;
+
+                text-align: center;
+
+                box-sizing: border-box;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <h1>Adeel Sarwar</h1>
 
-    <p>BSCS Student</p>
+    <!-- ---------------- NAVBAR ---------------- -->
 
-    <a href="https://github.com/AdeelSarwar007" target="_blank">
-        My GitHub
-    </a>
+    <div class="navbar">
 
-    <br><br>
+        <a href="#home">Home</a>
 
-    <img src="profile.jpg"
-         alt="Adeel Picture"
-         width="200">
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+
+    <!-- ---------------- MAIN CARD ---------------- -->
+
+    <div class="card">
+
+
+        <!-- HOME -->
+
+        <section id="home">
+
+            <h1>Adeel Sarwar</h1>
+
+            <p style="text-align:center;">
+                BSCS Student | Future AI Engineer
+            </p>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                Passionate BSCS student focused on Artificial Intelligence,
+                Full Stack Development and Software Engineering.
+                Currently building AI projects and preparing for an
+                AI Engineering career.
+            </p>
+
+        </section>
+
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <h2>Skills</h2>
+
+            <div class="skills">
+
+                <div class="skill-card">Python</div>
+
+                <div class="skill-card">SQL</div>
+
+                <div class="skill-card">HTML</div>
+
+                <div class="skill-card">CSS</div>
+
+                <div class="skill-card">JavaScript</div>
+
+                <div class="skill-card">AI</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <ol>
+
+                <li>Student Management System</li>
+
+                <li>Library Management System</li>
+
+                <li>CareerPilot AI</li>
+
+                <li>AI Patient Triage System (FYP)</li>
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section>
+
+            <h2>Personal Information</h2>
+
+            <p>Age: 21</p>
+
+            <p>City: Vehari</p>
+
+            <p>Degree: BSCS</p>
+
+            <p>CGPA: 3.28</p>
+
+        </section>
+
+
+
+        <!-- GOALS -->
+
+        <section>
+
+            <h2>Goals</h2>
+
+            <ul>
+
+                <li>Become an AI Engineer</li>
+
+                <li>Build AI Products</li>
+
+                <li>Start Freelancing</li>
+
+                <li>Launch SaaS Products</li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Enter Name"
+                >
+
+                <input
+                    type="email"
+                    placeholder="Enter Email"
+                >
+
+                <textarea
+                    placeholder="Enter Message"
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="github-btn"
+                >
+                    Submit
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- GITHUB -->
+
+        <section>
+
+            <h2>GitHub</h2>
+
+            <a
+                class="github-btn"
+                href="https://github.com/AdeelSarwar007"
+                target="_blank"
+            >
+                Visit My GitHub
+            </a>
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- ---------------- FOOTER ---------------- -->
+
+    <footer>
+
+        © 2026 Adeel Sarwar | Future AI Engineer
+
+    </footer>
+
 
 </body>
 
