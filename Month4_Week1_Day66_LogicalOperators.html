@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Eligibility Checker</title>
+</head>
+<body>
+    <h1>Student Eligibility Checker</h1>
+
+    <script>
+        let marks = Number(prompt("Enter marks (0-100):"));
+        let attendance = Number(prompt("Enter attendance (0-100):"));
+
+        if (
+            !Number.isFinite(marks) ||
+            !Number.isFinite(attendance) ||
+            marks < 0 || marks > 100 ||
+            attendance < 0 || attendance > 100
+        ) {
+            alert("Please enter valid numbers between 0 and 100.");
+        } else if (marks >= 50 && attendance >= 75) {
+            alert("Eligible: Student Passed!");
+        } else {
+            alert("Not Eligible: Marks or attendance are too low.");
+        }
+    </script>
+</body>
+</html>
