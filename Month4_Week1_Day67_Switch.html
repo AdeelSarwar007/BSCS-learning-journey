@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Message</title>
+</head>
+<body>
+    <h1>Student Grade Checker</h1>
+
+    <script>
+        let grade = prompt("Enter your grade (A, B, C, D, F):");
+
+        if (grade !== null) {
+            grade = grade.trim().toUpperCase();
+
+            switch (grade) {
+                case "A":
+                    alert("Excellent work!");
+                    break;
+
+                case "B":
+                    alert("Very good!");
+                    break;
+
+                case "C":
+                    alert("Good, keep improving!");
+                    break;
+
+                case "D":
+                    alert("You need more practice.");
+                    break;
+
+                case "F":
+                    alert("You need to work harder.");
+                    break;
+
+                default:
+                    alert("Invalid grade. Enter A, B, C, D, or F.");
+            }
+        }
+    </script>
+</body>
+</html>
