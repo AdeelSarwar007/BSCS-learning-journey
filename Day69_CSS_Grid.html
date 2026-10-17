@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 69 - CSS Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #00000015;
+        }
+
+        .card h2 {
+            color: #2563eb;
+        }
+
+        .card p {
+            color: #475569;
+        }
+
+        @media (max-width: 700px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Dashboard</h1>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Structure of webpage</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Design of webpage</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Webpage functionality</p>
+        </div>
+
+        <div class="card">
+            <h2>Python</h2>
+            <p>Programming language</p>
+        </div>
+
+        <div class="card">
+            <h2>Database</h2>
+            <p>Store and manage data</p>
+        </div>
+
+        <div class="card">
+            <h2>Projects</h2>
+            <p>Practice and learning</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+ 
