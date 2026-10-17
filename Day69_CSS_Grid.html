@@ -1,99 +1,83 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 69 - CSS Grid</title>
+    <title>Student Dashboard</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f1f5f9;
-            margin: 0;
-            padding: 25px;
+            background: #f1f5f9;
+            padding: 20px;
         }
 
         h1 {
             text-align: center;
-            color: #1e293b;
         }
 
-        .grid-container {
+        .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 30px auto;
+            gap: 15px;
         }
 
         .card {
-            background-color: white;
-            padding: 30px 15px;
+            background: white;
+            padding: 25px;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0 3px 8px #00000015;
+            box-shadow: 0 2px 8px #00000020;
         }
 
         .card h2 {
             color: #2563eb;
         }
 
-        .card p {
-            color: #475569;
-        }
-
-        @media (max-width: 700px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 450px) {
-            .grid-container {
+        @media (max-width: 600px) {
+            .container {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
+    <h1>My Student Dashboard</h1>
 
-    <h1>Student Dashboard</h1>
-
-    <div class="grid-container">
-
+    <div class="container">
         <div class="card">
             <h2>HTML</h2>
-            <p>Structure of webpage</p>
+            <p>Webpage Structure</p>
         </div>
 
         <div class="card">
             <h2>CSS</h2>
-            <p>Design of webpage</p>
+            <p>Webpage Design</p>
         </div>
 
         <div class="card">
             <h2>JavaScript</h2>
-            <p>Webpage functionality</p>
+            <p>Webpage Functionality</p>
         </div>
 
         <div class="card">
             <h2>Python</h2>
-            <p>Programming language</p>
+            <p>Programming</p>
         </div>
 
         <div class="card">
             <h2>Database</h2>
-            <p>Store and manage data</p>
+            <p>Data Management</p>
         </div>
 
         <div class="card">
             <h2>Projects</h2>
-            <p>Practice and learning</p>
+            <p>Practical Learning</p>
         </div>
-
     </div>
-
 </body>
 </html>
- 
+   
