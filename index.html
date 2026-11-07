@@ -1,11 +1,25 @@
-<DOCTYPE html>
-    <html>
-        <head>
-            <tital>Day 6 Practice</tital>
-            <body>
-                <h1 id="title">Hello</h1>
-                <button onclick="changeText()">Click Me</button>
-                <script src="day 6.js"></script>
-            </body>
-        </head>
-    </html>>
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+        <form id="myForm">
+    <input type="text" id="username" placeholder="Enter name">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+    let form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("username").value;
+
+        document.getElementById("result").innerText =
+            "Welcome " + name;
+    });
+</script>    
+</body>
+</html> 

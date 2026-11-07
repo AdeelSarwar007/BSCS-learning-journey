@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 71 - JavaScript Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f1f5f9;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            max-width: 350px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            color: blue;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration</h1>
+
+        <form id="studentForm">
+
+            <input type="text" id="name"
+                placeholder="Enter Student Name" required>
+
+            <input type="text" id="roll"
+                placeholder="Enter Roll Number" required>
+
+            <button type="submit">Register Student</button>
+
+        </form>
+
+        <h3 id="result"></h3>
+
+    </div>
+
+    <script>
+
+        let form = document.getElementById("studentForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+
+            let roll = document.getElementById("roll").value;
+
+            document.getElementById("result").innerText =
+                "Name: " + name + " | Roll No: " + roll;
+
+        });
+
+    </script>
+
+</body>
+</html>
