@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Day 72 - Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            max-width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #result {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration</h1>
+
+        <form id="studentForm">
+
+            <input type="text" id="name"
+                placeholder="Enter Student Name">
+
+            <input type="text" id="roll"
+                placeholder="Enter Roll Number">
+
+            <input type="email" id="email"
+                placeholder="Enter Email">
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <p id="error"></p>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        let form = document.getElementById("studentForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+
+            let roll = document.getElementById("roll").value.trim();
+
+            let email = document.getElementById("email").value.trim();
+
+            let error = document.getElementById("error");
+
+            let result = document.getElementById("result");
+
+            error.innerText = "";
+            result.innerText = "";
+
+            if (name === "" || roll === "" || email === "") {
+
+                error.innerText = "Please fill all fields!";
+
+            } else {
+
+                result.innerText =
+                    "Registration Successful! Welcome " + name;
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
