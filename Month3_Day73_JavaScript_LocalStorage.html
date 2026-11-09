@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Day 73 - Local Storage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f1f5f9;
+        }
+
+        .container {
+            background: white;
+            max-width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 85%;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        #saveBtn {
+            background-color: green;
+        }
+
+        #deleteBtn {
+            background-color: red;
+        }
+
+        #result {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Name Saver</h1>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Student Name"
+        >
+
+        <br>
+
+        <button id="saveBtn">Save Name</button>
+
+        <button id="deleteBtn">Delete Name</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        let nameInput = document.getElementById("name");
+
+        let result = document.getElementById("result");
+
+        let saveBtn = document.getElementById("saveBtn");
+
+        let deleteBtn = document.getElementById("deleteBtn");
+
+
+        // Load saved name when page opens
+
+        let savedName = localStorage.getItem("studentName");
+
+        if (savedName !== null) {
+
+            result.innerText = "Saved Name: " + savedName;
+
+        }
+
+
+        // Save name
+
+        saveBtn.addEventListener("click", function() {
+
+            let name = nameInput.value.trim();
+
+            if (name === "") {
+
+                result.innerText = "Please enter your name!";
+
+            } else {
+
+                localStorage.setItem("studentName", name);
+
+                result.innerText = "Name Saved: " + name;
+
+                nameInput.value = "";
+
+            }
+
+        });
+
+
+        // Delete name
+
+        deleteBtn.addEventListener("click", function() {
+
+            localStorage.removeItem("studentName");
+
+            result.innerText = "Name Deleted Successfully!";
+
+        });
+
+    </script>
+
+</body>
+</html>
