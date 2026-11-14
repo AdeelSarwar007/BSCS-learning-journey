@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+
+<head>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+.card{
+    width:700px;
+    background:white;
+}
+
+@media (max-width:600px){
+
+    .card{
+        width:90%;
+        background-color: aqua;
+    }
+
+}
+
+</style>
+
+</head>
+
 <body>
-        <form id="myForm">
-    <input type="text" id="username" placeholder="Enter name">
-    <button type="submit">Submit</button>
-</form>
 
-<p id="result"></p>
+<div class="card">
 
-<script>
-    let form = document.getElementById("myForm");
+<h1>Adeel Sarwar</h1>
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+<p>Future AI Engineer</p>
 
-        let name = document.getElementById("username").value;
+</div>
 
-        document.getElementById("result").innerText =
-            "Welcome " + name;
-    });
-</script>    
 </body>
-</html> 
+
+</html>
