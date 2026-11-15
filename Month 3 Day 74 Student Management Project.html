@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #1e293b;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 11px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #addBtn {
+            background: #2563eb;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .deleteBtn {
+            background: #dc2626;
+            margin-left: 10px;
+        }
+
+        .student {
+            background: #f8fafc;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #message {
+            text-align: center;
+            color: red;
+        }
+
+        @media (max-width: 500px) {
+            .student {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .deleteBtn {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Management System</h1>
+
+        <h2>Add New Student</h2>
+
+        <form id="studentForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Student Name"
+            >
+
+            <input
+                type="text"
+                id="roll"
+                placeholder="Enter Roll Number"
+            >
+
+            <select id="department">
+                <option value="">Select Department</option>
+                <option value="BSCS">BS Computer Science</option>
+                <option value="BSIT">BS Information Technology</option>
+                <option value="BBA">BBA</option>
+            </select>
+
+            <button type="submit" id="addBtn">
+                Add Student
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <h2>Student List</h2>
+
+        <div id="studentList"></div>
+
+    </div>
+
+    <script>
+
+        let form = document.getElementById("studentForm");
+
+        let studentList = document.getElementById("studentList");
+
+        let message = document.getElementById("message");
+
+        let students = JSON.parse(
+            localStorage.getItem("students")
+        ) || [];
+
+
+        // Display Students
+
+        function displayStudents() {
+
+            studentList.innerHTML = "";
+
+            students.forEach(function(student, index) {
+
+                let div = document.createElement("div");
+
+                div.className = "student";
+
+                let info = document.createElement("span");
+
+                info.innerText =
+                    student.name + " | " +
+                    student.roll + " | " +
+                    student.department;
+
+                let deleteBtn = document.createElement("button");
+
+                deleteBtn.innerText = "Delete";
+
+                deleteBtn.className = "deleteBtn";
+
+                deleteBtn.addEventListener("click", function() {
+
+                    deleteStudent(index);
+
+                });
+
+                div.appendChild(info);
+
+                div.appendChild(deleteBtn);
+
+                studentList.appendChild(div);
+
+            });
+
+        }
+
+
+        // Add Student
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+
+            let roll = document.getElementById("roll").value.trim();
+
+            let department =
+                document.getElementById("department").value;
+
+            if (name === "" || roll === "" || department === "") {
+
+                message.innerText = "Please fill all fields!";
+
+                return;
+            }
+
+            students.push({
+                name: name,
+                roll: roll,
+                department: department
+            });
+
+            localStorage.setItem(
+                "students",
+                JSON.stringify(students)
+            );
+
+            message.innerText = "Student Added Successfully!";
+
+            form.reset();
+
+            displayStudents();
+
+        });
+
+
+        // Delete Student
+
+        function deleteStudent(index) {
+
+            students.splice(index, 1);
+
+            localStorage.setItem(
+                "students",
+                JSON.stringify(students)
+            );
+
+            displayStudents();
+
+        }
+
+
+        // Show saved students when page opens
+
+        displayStudents();
+
+    </script>
+
+</body>
+</html>
