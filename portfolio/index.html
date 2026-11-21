@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adeel Sarwar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2 class="logo">Adeel</h2>
+        <nav class="links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeBtn">Dark Mode</button>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm Adeel Sarwar</h1>
+        <p>BSCS student learning AI and Full-Stack development.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a BSCS student at the University of Education, Vehari Campus. I am learning Python, JavaScript and Machine Learning.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div id="projectList" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" id="nameInput" placeholder="Your name">
+            <input type="email" id="emailInput" placeholder="Your email">
+            <textarea id="msgInput" placeholder="Your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMsg"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
